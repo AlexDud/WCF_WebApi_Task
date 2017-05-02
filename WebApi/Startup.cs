@@ -1,6 +1,7 @@
 ﻿namespace WebApi
 {
     using System.Web.Http;
+    using Configuration;
     using Owin;
 
     public class Startup

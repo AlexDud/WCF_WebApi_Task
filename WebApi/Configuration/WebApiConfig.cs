@@ -11,6 +11,7 @@
 
             var container = new UnityContainer();
 
+            container.RegisterType<IHello, Hello>(new TransientLifetimeManager());
 
             config.DependencyResolver = new UnityResolver(container);
         }

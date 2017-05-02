@@ -5,10 +5,18 @@
     [RoutePrefix("api/v1/users")]
     public class UsersController : ApiController
     {
+        private readonly IHello hello;
+
+        public UsersController(IHello hello)
+        {
+            this.hello = hello;
+        }
+
         [Route("")]
         public IHttpActionResult Get()
         {
-            return Ok("All users were retrieved");
+            var message = hello.SayHello("Sasha");
+            return Ok(message);
         }
 
         [Route("add")]

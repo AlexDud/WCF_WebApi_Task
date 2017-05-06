@@ -1,6 +1,7 @@
 namespace WebApi.Migrations
 {
     using System.Data.Entity.Migrations;
+    using DAL;
 
     internal sealed class Configuration : DbMigrationsConfiguration<EfContext>
     {

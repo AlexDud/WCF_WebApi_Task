@@ -1,4 +1,4 @@
-﻿namespace WebApi
+﻿namespace WebApi.DAL
 {
     using System.Data.Entity;
     using Models;

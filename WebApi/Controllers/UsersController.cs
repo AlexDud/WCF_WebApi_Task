@@ -1,28 +1,47 @@
 ﻿namespace WebApi.Controllers
 {
+    using System;
     using System.Web.Http;
+    using DAL.Contracts;
+    using DTOs;
+    using Models;
 
     [RoutePrefix("api/v1/users")]
     public class UsersController : ApiController
     {
-        private readonly IHello hello;
+        private readonly IUnitOfWork uow;
 
-        public UsersController(IHello hello)
+        public UsersController(IUnitOfWork uow)
         {
-            this.hello = hello;
+            this.uow = uow;
         }
 
         [Route("")]
         public IHttpActionResult Get()
         {
-            var message = hello.SayHello("Sasha");
-            return Ok(message);
+            return Ok("All users");
         }
 
         [Route("add")]
-        public IHttpActionResult Post()
+        public IHttpActionResult Post(UserDto dto)
         {
-            return Ok("User added");
+            try
+            {
+                var user = new User
+                {
+                    Name = dto.UserName,
+                    Company = new Company { Name = dto.CompanyName }
+                };
+
+                uow.UserRepository.Insert(user);
+                uow.Save();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }    
         }
     }
 }

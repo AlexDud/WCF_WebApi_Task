@@ -1,10 +1,9 @@
 ﻿namespace WebApi.DAL
 {
-    using System;
     using Contracts;
     using Models;
 
-    public class UnitOfWork : IUnitOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork 
     {
         private readonly EfContext context;
         private readonly IGenericRepository<User> userRepository;

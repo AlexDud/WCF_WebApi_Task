@@ -14,20 +14,9 @@
             dbSet = context.Set<TEntity>();
         }
 
-        public virtual TEntity GetById(object id)
-        {
-            return dbSet.Find(id);
-        }
-
         public void Insert(TEntity entity)
         {
             dbSet.Add(entity);
-        }
-
-        public void Update(TEntity entity)
-        {
-            dbSet.Attach(entity);
-            context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

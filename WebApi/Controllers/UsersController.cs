@@ -16,12 +16,6 @@
             this.uow = uow;
         }
 
-        [Route("")]
-        public IHttpActionResult Get()
-        {
-            return Ok("All users");
-        }
-
         [Route("add")]
         public IHttpActionResult Post(UserDto dto)
         {

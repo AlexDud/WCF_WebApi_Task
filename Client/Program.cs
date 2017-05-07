@@ -18,7 +18,7 @@
                 {
                     Console.WriteLine();
                     AddUser(service);
-                    Console.WriteLine("\nDo you want to add one more user? Press any other key to continue or 'Esc' for exit");
+                    Console.WriteLine("\nDo you want to add one more user? Press any key to continue or 'Esc' for exit");
                     response = Console.ReadKey();
                 }
             }

@@ -4,6 +4,8 @@ namespace WebApi.App_Start
     using DAL.Contracts;
     using System;
     using Microsoft.Practices.Unity;
+    using Microsoft.Practices.Unity.Mvc;
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     /// <summary>
     /// Specifies the Unity configuration for the main container.
@@ -14,6 +16,7 @@ namespace WebApi.App_Start
         private static Lazy<IUnityContainer> container = new Lazy<IUnityContainer>(() =>
         {
             var container = new UnityContainer();
+            DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));
             RegisterTypes(container);
             return container;
         });
@@ -34,7 +37,7 @@ namespace WebApi.App_Start
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUnitOfWork, UnitOfWork>(new PerRequestLifetimeManager());
         }
     }
 }

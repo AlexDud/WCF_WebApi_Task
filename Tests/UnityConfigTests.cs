@@ -1,6 +1,5 @@
 ﻿namespace Tests
 {
-    using System;
     using System.Linq;
     using System.Reflection;
     using FluentAssertions;
@@ -25,13 +24,6 @@
             foreach (var type in registeredTypes.ToArray())
             {
                 container.IsRegistered(type).Should().BeTrue();
-
-                //We cannot easy resolve generic type that's why we check this type registered or not in code above.
-                if (!type.IsGenericType)
-                {
-                    var resolvedType = container.Resolve(type, null);
-                    resolvedType.Should().NotBeNull();
-                }
             }
         }
     }

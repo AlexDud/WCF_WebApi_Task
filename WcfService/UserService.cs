@@ -23,9 +23,9 @@
                 new StringContent(serializedDto, Encoding.UTF8, "application/json"));
 
             if (result.IsSuccessStatusCode)
-                Console.WriteLine("\nUser successfully passed through WCF service to WebAPi service");
+                Console.WriteLine("User successfully passed through WCF service to WebAPi service\n");
             else
-                Console.WriteLine("\nError! Please verify your WCF and WebApi services settings");
+                Console.WriteLine("Error! Please verify your WCF and WebApi services settings\n");
         }
     }
 }

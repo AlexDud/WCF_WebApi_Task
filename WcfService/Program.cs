@@ -4,6 +4,7 @@
     using System.ServiceModel;
     using System.ServiceModel.Description;
 
+    //Run from VS with Administrator rights if you got an exception like "you don't have permissions ..."
     class Program
     {
         static void Main(string[] args)

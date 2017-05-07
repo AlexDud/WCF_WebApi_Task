@@ -156,14 +156,18 @@
     <Compile Include="DAL\Contracts\IGenericRepository.cs" />
     <Compile Include="DAL\Contracts\IUnitOfWork.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
-    <Compile Include="DTOs\UserDto.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{7749FEB9-B0B4-477C-BAA0-BD2C645A1EB4}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

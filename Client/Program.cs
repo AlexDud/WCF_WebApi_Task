@@ -1,6 +1,7 @@
 ﻿namespace Client
 {
     using System;
+    using Contracts;
 
     class Program
     {
@@ -13,7 +14,7 @@
             Console.WriteLine("Input company name:");
             var companyName = Console.ReadLine();
 
-            service.AddUser(userName, companyName);
+            service.AddUser(new UserDto { UserName = userName, CompanyName = companyName });
 
             Console.ReadKey();
         }

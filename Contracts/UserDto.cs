@@ -1,4 +1,4 @@
-﻿namespace WebApi.DTOs
+﻿namespace Contracts
 {
     public class UserDto
     {

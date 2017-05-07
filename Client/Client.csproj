@@ -62,9 +62,18 @@
     <None Include="Service References\WcfService\UserService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\WcfService\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{7749FEB9-B0B4-477C-BAA0-BD2C645A1EB4}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WcfService\" />

@@ -2,12 +2,12 @@
 {
     using System;
     using System.Web.Http.Results;
+    using Contracts;
     using FluentAssertions;
     using NSubstitute;
     using Ploeh.AutoFixture;
     using WebApi.Controllers;
     using WebApi.DAL.Contracts;
-    using WebApi.DTOs;
     using WebApi.Models;
     using Xunit;
 

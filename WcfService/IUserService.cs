@@ -2,11 +2,12 @@
 {
     using System.ServiceModel;
     using System.Threading.Tasks;
+    using Contracts;
 
     [ServiceContract]
     public interface IUserService
     {
         [OperationContract]
-        Task AddUser(string userName, string companyName);
+        Task AddUser(UserDto dto);
     }
 }

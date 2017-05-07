@@ -16,10 +16,10 @@ namespace Client.WcfService {
     public interface IUserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AddUser", ReplyAction="http://tempuri.org/IUserService/AddUserResponse")]
-        void AddUser(string userName, string companyName);
+        void AddUser(Contracts.UserDto dto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AddUser", ReplyAction="http://tempuri.org/IUserService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(string userName, string companyName);
+        System.Threading.Tasks.Task AddUserAsync(Contracts.UserDto dto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace Client.WcfService {
                 base(binding, remoteAddress) {
         }
         
-        public void AddUser(string userName, string companyName) {
-            base.Channel.AddUser(userName, companyName);
+        public void AddUser(Contracts.UserDto dto) {
+            base.Channel.AddUser(dto);
         }
         
-        public System.Threading.Tasks.Task AddUserAsync(string userName, string companyName) {
-            return base.Channel.AddUserAsync(userName, companyName);
+        public System.Threading.Tasks.Task AddUserAsync(Contracts.UserDto dto) {
+            return base.Channel.AddUserAsync(dto);
         }
     }
 }

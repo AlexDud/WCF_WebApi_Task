@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ea83dde3-6a17-4eff-b624-bc5877c31f3c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7532d5e3-a192-47ad-bb96-77f2f55c774e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:4322/UserService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="a2d4f3df-a318-4499-96a4-0701994861a2" SourceId="1" SourceUrl="http://localhost:4322/UserService?xsd=xsd0" />
-    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="fd34a8d6-a06c-4b05-9533-63c0675e81d4" SourceId="1" SourceUrl="http://localhost:4322/UserService?disco" />
-    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="ac4fd35f-0f0d-4f4e-a686-c61c9293e07a" SourceId="1" SourceUrl="http://localhost:4322/UserService?xsd=xsd1" />
-    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="9665cb50-214f-40c8-b887-7ff20e5d1be8" SourceId="1" SourceUrl="http://localhost:4322/UserService?wsdl" />
+    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="33788079-9fc1-405a-bb67-521da1ac8ece" SourceId="1" SourceUrl="http://localhost:4322/UserService?xsd=xsd0" />
+    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="5a60b951-9883-4442-ae16-a0f398a5dcc5" SourceId="1" SourceUrl="http://localhost:4322/UserService?disco" />
+    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="e2a44650-5acf-409e-8a73-7ad83ed579cc" SourceId="1" SourceUrl="http://localhost:4322/UserService?xsd=xsd2" />
+    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="c33bdd1c-9aee-429f-ad44-3722c33ac5cc" SourceId="1" SourceUrl="http://localhost:4322/UserService?xsd=xsd1" />
+    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="3f482b62-013c-49c4-aded-63e7e79b331f" SourceId="1" SourceUrl="http://localhost:4322/UserService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

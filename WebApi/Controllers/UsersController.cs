@@ -2,8 +2,8 @@
 {
     using System;
     using System.Web.Http;
+    using Contracts;
     using DAL.Contracts;
-    using DTOs;
     using Models;
 
     [RoutePrefix("api/v1/users")]

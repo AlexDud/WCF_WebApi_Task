@@ -16,7 +16,6 @@
             {
                 while (response.Key != ConsoleKey.Escape)
                 {
-                    Console.WriteLine();
                     AddUser(service);
                     Console.WriteLine("\nDo you want to add one more user? Press any key to continue or 'Esc' for exit");
                     response = Console.ReadKey();
@@ -34,11 +33,7 @@
             var userName = Console.ReadLine();
             Console.WriteLine();
 
-            Console.Write("Input company name: ");
-            var companyName = Console.ReadLine();
-            Console.WriteLine();
-
-            service.AddUser(new UserDto {UserName = userName, CompanyName = companyName});
+            service.AddUser(new UserDto {UserName = userName});
         }
     }
 }

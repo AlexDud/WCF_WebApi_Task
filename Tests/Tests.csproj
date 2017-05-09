@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SetDefaultCompanyFilterAttributeTests.cs" />
     <Compile Include="UnityConfigTests.cs" />
     <Compile Include="UsersControllerTests.cs" />
   </ItemGroup>

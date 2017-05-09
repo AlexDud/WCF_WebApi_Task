@@ -4,7 +4,8 @@
     using System.ServiceModel;
     using System.ServiceModel.Description;
 
-    //Run from VS with Administrator rights if you got an exception like "you don't have permissions ..."
+    //Run from VS with Administrator rights if you got an exception like 
+    //"HTTP could not register URL http://+:4322/UserService/. Your process does not have access rights to this namespace"
     class Program
     {
         static void Main(string[] args)

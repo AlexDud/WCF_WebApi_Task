@@ -2,6 +2,7 @@
 {
     using System;
     using System.Web.Http;
+    using App_Start;
     using Contracts;
     using DAL.Contracts;
     using Models;
@@ -17,6 +18,7 @@
         }
 
         [Route("add")]
+        [SetDefaultCompanyFilter]
         public IHttpActionResult Post(UserDto dto)
         {
             try
